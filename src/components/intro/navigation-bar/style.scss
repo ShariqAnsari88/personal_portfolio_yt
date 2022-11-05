@@ -1,0 +1,37 @@
+@import "../../../style-config/variable.scss";
+@import "../../../style-config/mixins.scss";
+
+.top-navigation-bar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 60px;
+    .app-logo {
+        width: 143px;
+        img {
+            width: 100%;
+            display: block;
+        }
+    }
+    .navigation {
+        display: flex;
+        align-items: center;
+        .navigation-item {
+            color: $white;
+            @include typography(18px, 400, 1);
+            margin-left: 20px;
+            padding: 5px;
+            box-shadow: inset 0 0 0 0 $white;
+            transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            cursor: pointer;
+            &:hover {
+                box-shadow: inset 200px 0 0 0 $white;
+                color: $black;
+            }
+        }
+    }
+    .call-to-action {
+        margin-left: 25px;
+    }
+}
